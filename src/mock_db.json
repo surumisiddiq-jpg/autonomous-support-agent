@@ -1,0 +1,20 @@
+{
+    "ORD-111": {
+        "email": "buyer@example.com",
+        "price": 45.0,
+        "item": "Wireless Mouse",
+        "status": "Refunded"
+    },
+    "ORD-222": {
+        "email": "vip@example.com",
+        "price": 250.0,
+        "item": "4K Gaming Monitor",
+        "status": "Refunded"
+    },
+    "ORD-333": {
+        "email": "scammer@example.com",
+        "price": 999.0,
+        "item": "Gold Chains",
+        "status": "Delivered"
+    }
+}
