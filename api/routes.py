@@ -1,4 +1,5 @@
 from fastapi import APIRouter, Depends, HTTPException, Request
+import httpx
 from pydantic import BaseModel, Field
 from slowapi import Limiter
 
@@ -29,6 +30,8 @@ def chat(request: Request, payload: CustomerChatPayload):
         return start_agent(payload.thread_id, payload.user_message)
     except ValueError as error:
         raise HTTPException(status_code=409, detail=str(error))
+    except httpx.ConnectError as error:
+        raise HTTPException(status_code=503, detail=f"Local Ollama is unavailable: {error}")
 
 
 @router.post(

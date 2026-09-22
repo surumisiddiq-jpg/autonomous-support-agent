@@ -5,6 +5,7 @@ langgraph-checkpoint==1.0.12
 fastapi
 uvicorn[standard]
 requests
+httpx
 pydantic==2.8.2
 streamlit==1.38.0
 packaging<25,>=20

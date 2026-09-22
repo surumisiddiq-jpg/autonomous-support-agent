@@ -15,7 +15,11 @@ from src.schema import ExtractedCustomerIntent
 db = MockDatabase()
 
 # Ollama runs the model locally and does not require an API key or paid credits.
-llm = ChatOllama(model=settings.OLLAMA_MODEL, temperature=0)
+llm = ChatOllama(
+    model=settings.OLLAMA_MODEL,
+    temperature=0,
+    base_url=settings.OLLAMA_BASE_URL,
+)
 structured_llm = llm.with_structured_output(ExtractedCustomerIntent)
 
 # 1. Update State to accept raw user chat input
