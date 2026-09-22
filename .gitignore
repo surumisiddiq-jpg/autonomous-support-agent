@@ -7,4 +7,16 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 *.log
+# Docker
+docker-data/
+docker-volumes/
+*.pid
 
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+Footer
+© 2026 GitHub, Inc.
